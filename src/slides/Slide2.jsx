@@ -9,10 +9,11 @@ const Slide2 = () => {
                 position: 'absolute',
                 width: '800px',
                 height: '600px',
-                left: {lg: 0, md: '-10%', sm: '-50%', xs: '-100%'},
+                left: {xl: '28%',lg: '25%', md: '-10%', sm: '-50%', xs: '-100%'},
+                top: '10%',
                 zIndex: 100,
-                display: {sm: 'flex', xs: 'none'}
-            }} className={'animate__animated animate__heartBeat '}/>
+                // display: {sm: 'flex', xs: 'none'}
+            }} className={'animate__animated animate__heartBeat '}/>'
         </>
     );
 };

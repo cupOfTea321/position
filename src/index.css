@@ -14,11 +14,11 @@
   src: url('./assets/font/HeadingNowTrial-45Medium.ttf');
   font-weight: 400;
 }
-@font-face {
-  font-family: 'Sofia Pro', sans-serif;
-  src: url('./assets/font/Sofia Pro Regular Az.otf');
-  font-weight: 400;
-}
+/*@font-face {*/
+/*  font-family: 'Sofia Pro', sans-serif;*/
+/*  src: url('./assets/font/Sofia Pro Regular Az.otf');*/
+/*  font-weight: 400;*/
+/*}*/
 .Raleway{
   font-family: 'Raleway', sans-serif ! important;
   font-weight: 500;
