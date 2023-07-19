@@ -3,10 +3,15 @@ import phone6 from './assets/phone1.png'
 import React, {useState} from "react";
 import ScrollLock from "./components/layout/ScrollLock.jsx";
 import Slide1 from "./slides/Slide1.jsx";
-import PositionButton from "./components/PositionButton.jsx";
+import PositionButton1 from "./components/PositionButton1.jsx";
 import Slide2 from "./slides/Slide2.jsx";
-import SlideText1 from "./components/SlideText1.jsx";
-import SlideText2 from "./components/SlideText2";
+import SlideTitle1 from "./components/slide1/SlideTitle1.jsx";
+import SlideTitle2 from "./components/slide2/SlideTitle2.jsx";
+import SlideText2 from "./components/slide2/SlideText2.jsx";
+import SlideText1 from "./components/slide1/SlideText1.jsx";
+import PositionButton2 from "./components/PositionButton2.jsx";
+import elephant from "./assets/slide2/elephant.png";
+import Centre2 from "./components/slide2/Centre2.jsx";
 
 function App() {
 
@@ -16,6 +21,7 @@ function App() {
         ? setSlide(slide + 1)
         : setSlide(1)
     }
+
   return (
     <Box sx={{
         // background:
@@ -36,20 +42,15 @@ function App() {
             backgroundPosition: 'top center',
             paddingBottom: '200px',
         }}>
+            {slide === 1 && <SlideTitle1/>}
+            {slide === 2 && <SlideTitle2/>}
+            {slide === 2 && <Centre2/>}
+
+            {slide === 1 && <PositionButton1 onMouseEnter={slideHandler}/>}
+            {slide === 2 && <PositionButton2 onMouseEnter={slideHandler}/>}
+
             {slide === 1 && <SlideText1/>}
             {slide === 2 && <SlideText2/>}
-
-            <PositionButton onMouseEnter={slideHandler}/>
-            <Typography sx={{
-                position: 'absolute',
-                bottom: {sm: '30px', xs: '90px'},
-                color: 'white',
-                fontSize: {sm: '30px', xs: '18px'},
-                zIndex: 300,
-                textShadow: '10px 20px 200px white, 0 0 1em grey, 0 0 1em grey',
-            }} className={'animate__animated animate__fadeInUp animate__delay-1s'}>
-                Партия адекватных пиарщиков!
-            </Typography>
         </Box>
         {slide === 1 && <Slide1 />}
         {slide === 2 && <Slide2 />}
