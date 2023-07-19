@@ -1,7 +1,7 @@
 import React from 'react';
 import {Typography} from "@mui/material";
 
-const SlideText1 = () => {
+const SlideText1 = ({text = 'Партия адекватных пиарщиков!'}) => {
     return (
         <>
             <Typography sx={{
@@ -12,7 +12,7 @@ const SlideText1 = () => {
                 zIndex: 300,
                 textShadow: '10px 20px 200px white, 0 0 1em grey, 0 0 1em grey',
             }} className={'animate__animated animate__fadeInUp animate__delay-1s'}>
-                 Партия адекватных пиарщиков!
+                {text}
             </Typography>
         </>
     );

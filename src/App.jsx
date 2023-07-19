@@ -12,14 +12,20 @@ import SlideText1 from "./components/slide1/SlideText1.jsx";
 import PositionButton2 from "./components/PositionButton2.jsx";
 import elephant from "./assets/slide2/elephant.png";
 import Centre2 from "./components/slide2/Centre2.jsx";
+import Centre3 from "./components/slide3/Centre3.jsx";
+import SlideTitle3 from "./components/slide3/SlideTitle3.jsx";
+import Slide3 from "./slides/Slide3.jsx";
 
 function App() {
 
     const [slide, setSlide] = useState(1)
     const slideHandler = () => {
-        slide < 2
-        ? setSlide(slide + 1)
-        : setSlide(1)
+        setTimeout(() => {
+            slide < 3
+                ? setSlide(slide + 1)
+                : setSlide(1)
+        }, 100)
+
     }
 
   return (
@@ -44,16 +50,22 @@ function App() {
         }}>
             {slide === 1 && <SlideTitle1/>}
             {slide === 2 && <SlideTitle2/>}
+            {slide === 3 && <SlideTitle3/>}
+
             {slide === 2 && <Centre2/>}
+            {slide === 3 && <Centre3/>}
 
             {slide === 1 && <PositionButton1 onMouseEnter={slideHandler}/>}
             {slide === 2 && <PositionButton2 onMouseEnter={slideHandler}/>}
+            {slide === 3 && <PositionButton2 onMouseEnter={slideHandler}/>}
 
             {slide === 1 && <SlideText1/>}
             {slide === 2 && <SlideText2/>}
+            {slide === 3 && <SlideText1 text={'Принципиально другой пиар!'}/>}
         </Box>
         {slide === 1 && <Slide1 />}
         {slide === 2 && <Slide2 />}
+        {slide === 3 && <Slide3 />}
 
 
     </Box>
