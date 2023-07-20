@@ -1,0 +1,66 @@
+import React from 'react';
+import {Box} from "@mui/material";
+import ScrollLock from "../components/layout/ScrollLock.jsx";
+import phone6 from "../assets/phone1.png";
+import SlideTitle1 from "../components/slide1/SlideTitle1.jsx";
+import SlideTitle2 from "../components/slide2/SlideTitle2.jsx";
+import SlideTitle3 from "../components/slide3/SlideTitle3.jsx";
+import SlideTitle4 from "../components/slide4/SlideTitle4.jsx";
+import Centre2 from "../components/slide2/Centre2.jsx";
+import Centre3 from "../components/slide3/Centre3.jsx";
+import PositionButton1 from "../components/PositionButton1.jsx";
+import SlideText1 from "../components/slide1/SlideText1.jsx";
+import SlideText2 from "../components/slide2/SlideText2.jsx";
+import Slide1 from "../slides/Slide1.jsx";
+import Slide2 from "../slides/Slide2.jsx";
+import Slide3 from "../slides/Slide3.jsx";
+import Slide4 from "../slides/Slide4.jsx";
+import {useState} from "react";
+import BlackPhoneSlide from "../components/BlackPhoneSlide";
+import WhitePhoneSlide from "../components/WhitePhoneSlide.jsx";
+
+const SliderPage = () => {
+    const [disabled, setDisabled] = useState(false);
+    const [slide, setSlide] = useState(1)
+    let backColor
+    const slideHandler = () => {
+        slide < 4
+            ? setSlide(slide + 1)
+            : setSlide(1)
+        if (!disabled) {
+            // Отключаем кнопку
+            setDisabled(true);
+
+            // Включаем кнопку через 500 миллисекунд
+            setTimeout(() => {
+                setDisabled(false);
+            }, 1000);
+        }
+        if (slide === 1) { backColor = 'black' }
+        if (slide === 2) { backColor = 'rgba(225, 231, 238, 1)' }
+        if (slide === 3) { backColor = 'rgba(225, 231, 238, 1)' }
+        if (slide === 4) { backColor = 'black' }
+    }
+
+    // backColor = slide === 4  ? 'black' : 'rgba(225, 231, 238, 1)'
+    return (
+        <Box sx={{
+            // background:
+        }}>
+
+            {slide === 1 && <BlackPhoneSlide slide={slide} slideHandler={slideHandler} disabled={disabled}/>}
+            {slide === 2 && <WhitePhoneSlide slide={slide} slideHandler={slideHandler} disabled={disabled}/>}
+            {slide === 3 && <WhitePhoneSlide slide={slide} slideHandler={slideHandler} disabled={disabled}/>}
+            {slide === 4 && <BlackPhoneSlide slide={slide} slideHandler={slideHandler} disabled={disabled}/>}
+
+            {slide === 1 && <Slide1 />}
+            {slide === 2 && <Slide2 />}
+            {slide === 3 && <Slide3 />}
+            {slide === 4 && <Slide4 />}
+
+
+        </Box>
+    );
+};
+
+export default SliderPage;
