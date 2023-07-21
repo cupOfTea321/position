@@ -16,7 +16,7 @@ const Slide3 = () => {
                 bottom: '0%',
                 zIndex: 0,
 
-            }} className={'animate__animated  animate__delay-1s'}/>
+            }} className={'animate__animated  animate__heartBeat'}/>
             <Box component={'img'} src={deleteMan} sx={{
                 position: 'absolute',
                 width: '30%',

@@ -18,13 +18,13 @@ import Slide4 from "../slides/Slide4.jsx";
 import {useState} from "react";
 import BlackPhoneSlide from "../components/BlackPhoneSlide";
 import WhitePhoneSlide from "../components/WhitePhoneSlide.jsx";
+import Slide5 from "../slides/Slide5";
 
 const SliderPage = () => {
     const [disabled, setDisabled] = useState(false);
     const [slide, setSlide] = useState(1)
-    let backColor
     const slideHandler = () => {
-        slide < 4
+        slide < 5
             ? setSlide(slide + 1)
             : setSlide(1)
         if (!disabled) {
@@ -36,11 +36,8 @@ const SliderPage = () => {
                 setDisabled(false);
             }, 1000);
         }
-        if (slide === 1) { backColor = 'black' }
-        if (slide === 2) { backColor = 'rgba(225, 231, 238, 1)' }
-        if (slide === 3) { backColor = 'rgba(225, 231, 238, 1)' }
-        if (slide === 4) { backColor = 'black' }
     }
+
 
     // backColor = slide === 4  ? 'black' : 'rgba(225, 231, 238, 1)'
     return (
@@ -52,11 +49,13 @@ const SliderPage = () => {
             {slide === 2 && <WhitePhoneSlide slide={slide} slideHandler={slideHandler} disabled={disabled}/>}
             {slide === 3 && <WhitePhoneSlide slide={slide} slideHandler={slideHandler} disabled={disabled}/>}
             {slide === 4 && <BlackPhoneSlide slide={slide} slideHandler={slideHandler} disabled={disabled}/>}
+            {slide === 5 && <WhitePhoneSlide slide={slide} slideHandler={slideHandler} disabled={disabled}/>}
 
             {slide === 1 && <Slide1 />}
             {slide === 2 && <Slide2 />}
             {slide === 3 && <Slide3 />}
             {slide === 4 && <Slide4 />}
+            {slide === 5 && <Slide5 />}
 
 
         </Box>

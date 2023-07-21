@@ -10,6 +10,7 @@ import PositionButton1 from "./PositionButton1.jsx";
 import SlideText1 from "./slide1/SlideText1.jsx";
 import SlideText2 from "./slide2/SlideText2.jsx";
 import {Box} from "@mui/material";
+import SlideTitle5 from "./slide5/SlideTitle5.jsx";
 
 const WhitePhoneSlide = ({slide, slideHandler, disabled}) => {
     return (
@@ -32,7 +33,7 @@ const WhitePhoneSlide = ({slide, slideHandler, disabled}) => {
             {/*{slide === 1 && <SlideTitle1/>}*/}
             {slide === 2 && <SlideTitle2/>}
             {slide === 3 && <SlideTitle3/>}
-            {/*{slide === 4 && <SlideTitle4/>}*/}
+            {slide === 5 && <SlideTitle5/>}
 
             {slide === 2 && <Centre2/>}
             {slide === 3 && <Centre3/>}
@@ -46,10 +47,14 @@ const WhitePhoneSlide = ({slide, slideHandler, disabled}) => {
                 color: 'white',
                 background: 'rgba(231, 69, 54, 1)',
             }} onMouseEnter={slideHandler}/>}
-
+            {slide === 5 && <PositionButton1 disabled={disabled} sx={{
+                color: 'white',
+                background: 'rgba(231, 69, 54, 1)',
+            }} onMouseEnter={slideHandler}/>}
             {/*{slide === 1 && <SlideText1/>}*/}
             {slide === 2 && <SlideText2/>}
             {slide === 3 && <SlideText1 text={'Принципиально другой пиар!'}/>}
+            {slide === 5 && <SlideText2 text={'Место сильных брендов!'}/>}
         </Box>
     );
 };
