@@ -3,10 +3,11 @@ import {Typography} from "@mui/material";
 
 const SlideText1 = () => {
     const titleCSS = {
-        fontSize: {xl: '100px', lg: '80px', md: '60px', sm: '70px', xs: '45px'},
+        fontSize: {xl: '130px', lg: '100px', md: '90px', sm: '80px', xs: '70px'},
         fontWeight: 500,
         // position: 'absolute',
         zIndex: 500,
+        fontFamily: 'Heading Now Trial'
         // textShadow: 'rgba(231, 69, 54, 1) 1px -3px',
         // shadowColor: 'green',
         // lineHeight: '184.1px',

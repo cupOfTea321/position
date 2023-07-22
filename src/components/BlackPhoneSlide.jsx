@@ -27,7 +27,8 @@ const BlackPhoneSlide = ({slide, slideHandler, disabled}) => {
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'top center',
             paddingBottom: '200px',
-        }}>
+            fontFamily: 'heading_now_trial45_medium'
+        }} >
 
             {slide === 1 && <SlideTitle1/>}
             {slide === 4 && <SlideTitle4/>}

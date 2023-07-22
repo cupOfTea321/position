@@ -4,7 +4,7 @@ import {Typography} from "@mui/material";
 const SlideText1 = ({text = 'Партия адекватных пиарщиков!'}) => {
     return (
         <>
-            <Typography sx={{
+            <Typography variant={'text'} sx={{
                 position: 'absolute',
                 bottom: {sm: '30px', xs: '90px'},
                 color: 'white',
