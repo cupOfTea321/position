@@ -1,10 +1,10 @@
 import React from 'react';
 import {Box} from "@mui/material";
-import speaker from "../assets/speakerVlad.svg";
-import speakerMobile from "../assets/speaker.png";
-import people from "../assets/people.png";
-import leftTV from "../assets/leftTV.png";
-import rightTV from "../assets/rightTV.png";
+import speaker from "../assets/slide1/speakerVlad.svg";
+import speakerMobile from "../assets/slide1/speaker.png";
+import people from "../assets/slide1/people.png";
+import leftTV from "../assets/slide1/leftTV.png";
+import rightTV from "../assets/slide1/rightTV.png";
 
 const Slide1 = () => {
     return (

@@ -1,16 +1,16 @@
 import React from 'react';
-import phone6 from "../assets/phone1.png";
-import SlideTitle1 from "./slide1/SlideTitle1.jsx";
-import SlideTitle2 from "./slide2/SlideTitle2.jsx";
-import SlideTitle3 from "./slide3/SlideTitle3.jsx";
-import SlideTitle4 from "./slide4/SlideTitle4.jsx";
-import Centre2 from "./slide2/Centre2.jsx";
-import Centre3 from "./slide3/Centre3.jsx";
+import phone6 from "../../assets/slide1/phone1.png";
+import SlideTitle1 from "../slide1/SlideTitle1.jsx";
+import SlideTitle2 from "../slide2/SlideTitle2.jsx";
+import SlideTitle3 from "../slide3/SlideTitle3.jsx";
+import SlideTitle4 from "../slide4/SlideTitle4.jsx";
+import Centre2 from "../slide2/Centre2.jsx";
+import Centre3 from "../slide3/Centre3.jsx";
 import PositionButton1 from "./PositionButton1.jsx";
-import SlideText1 from "./slide1/SlideText1.jsx";
-import SlideText2 from "./slide2/SlideText2.jsx";
+import SlideTextWhite from "./SlideTextWhite.jsx";
+import SlideTextBlack from "./SlideTextBlack.jsx";
 import {Box} from "@mui/material";
-import SlideTitle5 from "./slide5/SlideTitle5.jsx";
+import SlideTitle5 from "../slide5/SlideTitle5.jsx";
 
 const WhitePhoneSlide = ({slide, slideHandler, disabled}) => {
     return (
@@ -51,10 +51,10 @@ const WhitePhoneSlide = ({slide, slideHandler, disabled}) => {
                 color: 'white',
                 background: 'rgba(231, 69, 54, 1)',
             }} onMouseEnter={slideHandler}/>}
-            {/*{slide === 1 && <SlideText1/>}*/}
-            {slide === 2 && <SlideText2/>}
-            {slide === 3 && <SlideText1 text={'Принципиально другой пиар!'}/>}
-            {slide === 5 && <SlideText2 text={'Место сильных брендов!'}/>}
+            {/*{slide === 1 && <SlideTextWhite/>}*/}
+            {slide === 2 && <SlideTextBlack />}
+            {slide === 3 && <SlideTextWhite text={'Работа на бизнес-результат!'}/>}
+            {slide === 5 && <SlideTextBlack text={'Принципиально другой пиар!'}/>}
         </Box>
     );
 };

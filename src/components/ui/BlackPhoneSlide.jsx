@@ -1,14 +1,14 @@
 import React from 'react';
-import phone6 from "../assets/phone1.png";
-import SlideTitle1 from "./slide1/SlideTitle1.jsx";
-import SlideTitle2 from "./slide2/SlideTitle2.jsx";
-import SlideTitle3 from "./slide3/SlideTitle3.jsx";
-import SlideTitle4 from "./slide4/SlideTitle4.jsx";
-import Centre2 from "./slide2/Centre2.jsx";
-import Centre3 from "./slide3/Centre3.jsx";
+import phone6 from "../../assets/slide1/phone1.png";
+import SlideTitle1 from "../slide1/SlideTitle1.jsx";
+import SlideTitle2 from "../slide2/SlideTitle2.jsx";
+import SlideTitle3 from "../slide3/SlideTitle3.jsx";
+import SlideTitle4 from "../slide4/SlideTitle4.jsx";
+import Centre2 from "../slide2/Centre2.jsx";
+import Centre3 from "../slide3/Centre3.jsx";
 import PositionButton1 from "./PositionButton1.jsx";
-import SlideText1 from "./slide1/SlideText1.jsx";
-import SlideText2 from "./slide2/SlideText2.jsx";
+import SlideTextWhite from "./SlideTextWhite.jsx";
+import SlideTextBlack from "./SlideTextBlack.jsx";
 import {Box} from "@mui/material";
 
 const BlackPhoneSlide = ({slide, slideHandler, disabled}) => {
@@ -43,8 +43,8 @@ const BlackPhoneSlide = ({slide, slideHandler, disabled}) => {
             }} disabled={disabled} onMouseEnter={slideHandler}/>}
 
 
-            {slide === 1 && <SlideText1/>}
-            {slide === 4 && <SlideText1 text={'Точка нестандартных решений!'}/>}
+            {slide === 1 && <SlideTextWhite/>}
+            {slide === 4 && <SlideTextWhite text={'Место сильных брендов!'}/>}
         </Box>
     );
 };
