@@ -33,7 +33,7 @@ const TeamPage = () => {
                 bottom: '0%',
                 zIndex: 0,
 
-            }} className={'animate__animated  animate__heartBeat'}/>
+            }} className={'animate__animated  animate__headShake'}/>
         </>
     );
 };

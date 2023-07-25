@@ -16,20 +16,21 @@ import slider8 from '../assets/slider/slider8.jpg';
 import slider9 from '../assets/slider/slider9.jpg';
 import slider10 from '../assets/slider/slider10.jpg';
 import btn from '../assets/slider/rightBtn.png';
-import {Box} from "@mui/material";
+import {Box, Typography} from "@mui/material";
+import PositionButton1 from "./ui/PositionButton1.jsx";
 
 const MySwiper = () => {
     const slides = [
-        slider1,
-        slider2,
-        slider3,
-        slider4,
-        slider5,
-        slider6,
-        slider7,
-        slider8,
-        slider9,
-        slider10,
+        {img: slider1, title: 'Алена Сухаревская', company: 'Юрент'},
+        {img: slider2, title: 'Сергей Денисенко', company: 'ВсеИнструменты.ру'},
+        {img: slider3, title: 'Юлия Варламова', company: 'Ситидрайв'},
+        {img: slider4, title: 'Юлия', company: 'Лента Онлайн'},
+        {img: slider5, title: 'Михаил Бергген', company: 'СДЭК'},
+        {img: slider6, title: 'Ольга Чернявская', company: 'Factory'},
+        {img: slider7, title: 'Ольга Шабаева', company: 'Работа.ру '},
+        {img: slider8, title: 'Дарья Орешко', company: 'flowwow'},
+        {img: slider9, title: 'Елена Винокурцева', company: 'Skyeng'},
+        {img: slider10, title: 'Анастасия Баштовая', company: 'Яндекс 360'},
     ]
     return (
         <>
@@ -52,28 +53,38 @@ const MySwiper = () => {
                     clickable: true,
                 }}
                 modules={[EffectCoverflow, Pagination, Navigation]}
-                className="swiper_container"
+                className="swiper_container animate__animated  animate__bounceIn "
             >
                 {slides.map(slide => (
                     <SwiperSlide key={slide} style={{
                         // width: {sm: '37rem', xs: '22rem'},
-                        height: {sm: '42rem', xs: '30rem'},
+                        height: {sm: '40vh', xs: '30rem'},
 
-                    }}>
-                        <Box component={'img'} src={slide} alt="slide_image" sx={{
+                    }} className={`proj-imgbx`}>
+                        <Box component={'img'} src={slide.img} alt="slide_image" sx={{
                             border: '3px solid black',
                             borderRadius: '2rem',
                             width: {sm: '37rem', xs: '22rem'},
-                            height: {sm: '42rem', xs: '30rem'},
+                            height: {sm: '70vh', xs: '30rem'},
                             objectFit: 'cover',
 
                         }}/>
+                        <Box className={`proj-txtx`} sx={{color: 'white'}}>
+                            <Typography variant={'h6'}>
+                                {slide.title}
+                            </Typography>
+                            <span>{slide.company}</span>
+                            <PositionButton1 sx={{
+                                position: '',
+                                marginTop: '20px'
+                            }} link={''}/>
+                        </Box>
                     </SwiperSlide>
                 ))}
 
 
                 <Box className="slider-controler" sx={{
-                    marginTop: {sm: '-1%', xs: '3%'}
+                    marginTop: {sm: '-1%', xs: '-20%'}
                 }}>
                     <Box className="swiper-button-prev slider-arrow" sx={{
                         left: '36%',

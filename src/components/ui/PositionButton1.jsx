@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Box} from "@mui/material";
 import {NavLink} from "react-router-dom";
 
-const PositionButton1 = ({sx, onMouseEnter, disabled }) => {
+const PositionButton1 = ({sx, onMouseEnter, disabled, link = 'team' }) => {
 
 
     // const handleClick = () => {
@@ -10,7 +10,7 @@ const PositionButton1 = ({sx, onMouseEnter, disabled }) => {
     //     }
     // }
     return (
-        <NavLink to={'team'} style={{
+        <NavLink to={link} style={{
             color: 'rgba(231, 69, 54, 1)',
             display: 'flex',
             justifyContent: 'center'
