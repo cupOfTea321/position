@@ -40,6 +40,7 @@ button{
   --animate-duration: 800ms;
   --animate-delay: 0.9s;
   font-family: 'Heading Now Trial' !important;
+  /*overflow: scroll;*/
 }
 html {
   scroll-behavior: smooth;
@@ -49,7 +50,7 @@ html {
 
 body {
   font-weight: 400;
-  overflow: hidden;
+
   position: relative;
   height: 100vh;
   /*background-color: #121212 !important;*/

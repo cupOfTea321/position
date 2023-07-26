@@ -19,6 +19,7 @@ import {useState} from "react";
 import BlackPhoneSlide from "../components/ui/BlackPhoneSlide.jsx";
 import WhitePhoneSlide from "../components/ui/WhitePhoneSlide.jsx";
 import Slide5 from "../slides/Slide5";
+import {useEffect} from "react";
 
 const SliderPage = () => {
     const [disabled, setDisabled] = useState(false);
@@ -38,7 +39,12 @@ const SliderPage = () => {
         }
     }
 
-
+    useEffect(() => {
+        document.body.style.overflow = 'hidden'
+        return () => {
+            document.body.style.overflow = 'scroll'
+        }
+    })
     // backColor = slide === 4  ? 'black' : 'rgba(225, 231, 238, 1)'
     return (
         <Box sx={{

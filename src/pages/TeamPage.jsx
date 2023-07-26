@@ -3,8 +3,15 @@ import MySwiper from "../components/team/Swiper.jsx";
 import phone6 from "../assets/slide1/phone1.png";
 import {Box} from "@mui/material";
 import phone from "../assets/slider/sliderPhone.png";
+import {useEffect} from "react";
 
 const TeamPage = () => {
+    useEffect(() => {
+        document.body.style.overflow = 'hidden'
+        return () => {
+            document.body.style.overflow = 'scroll'
+        }
+    })
     return (
         <>
             <Box sx={{

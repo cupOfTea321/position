@@ -70,7 +70,7 @@ const PersonPage = () => {
     const {id} = useParams()
     console.log(id)
     useEffect(() => {
-        document.body.style.overflow = 'auto'
+        document.body.style.overflow = 'scroll'
     })
 
     return (
