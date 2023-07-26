@@ -5,13 +5,13 @@ import {personParagraph} from "../../mui/utilsCSS.js";
 import RightText from "./RightText.jsx";
 import PersonBrand from "./PersonBrand.jsx";
 
-const RightPerson = () => {
+const RightPerson = ({person}) => {
     const personTitle = {
-        fontSize: '30px',
+        fontSize: {sm: '30px', xs: '22px'},
         position: 'relative',
 
     }
-
+    const {ava, leftP, rightP, name, company, position} = person
     return (
         <Box sx={{
             flex: 1,
@@ -21,7 +21,7 @@ const RightPerson = () => {
                 marginLeft: {sm: 0, xs: '24px'}
             }}>
                 <Typography variant={'text'} sx={personTitle}>
-                    Алена Сухаревская
+                    {name}
                     <Box component={'img'} src={frame} sx={{
                         position: 'absolute',
                         width: '44px',
@@ -33,7 +33,7 @@ const RightPerson = () => {
                 </Typography>
                 <Box>
                     <Typography variant={'text'} sx={personTitle}>
-                        PR-директор Юрент
+                        {company}
                         <Box component={'img'} src={frame} sx={{
                             position: 'absolute',
                             width: '44px',
@@ -48,8 +48,8 @@ const RightPerson = () => {
                 </Box>
             </Box>
 
-            <RightText sx={{display: {sm: 'block', xs: 'none'}}}/>
-            <PersonBrand sx={{display: {sm: 'block', xs: 'none'}}}/>
+            <RightText rightP={rightP}  sx={{display: {sm: 'block', xs: 'none'}}}/>
+            <PersonBrand  position={position}  sx={{display: {sm: 'block', xs: 'none'}}}/>
         </Box>
     );
 };

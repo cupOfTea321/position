@@ -6,20 +6,23 @@ import LeftText from "./LeftText.jsx";
 import RightText from "./RightText.jsx";
 import PersonBrand from "./PersonBrand.jsx";
 
-const LeftPerson = () => {
+const LeftPerson = ({person}) => {
+    const {ava, leftP, rightP, name, company, position} = person
     return (
         <Box sx={{
             flex: 1,
             marginRight: {sm: '74px', xs: 0},
         }}>
-            <Box component={'img'} src={ava1} sx={{
+            <Box component={'img'} src={ava} sx={{
                 marginBottom: '',
-                marginLeft: '-10px',
+                margin: '0 auto',
+                marginLeft: {sm: '-10px', xs: '0'},
+
                 marginTop: {sm: '20px', xs: '33px'}
             }} className={'animate__animated  animate__fadeInLeft'}/>
-            <PersonBrand sx={{display: {sm: 'none', xs: 'block'}}}/>
-            <RightText sx={{display: {sm: 'none', xs: 'block'}}}/>
-            <LeftText />
+            <PersonBrand position={position} sx={{display: {sm: 'none', xs: 'block'}}}/>
+            <RightText rightP={rightP} sx={{display: {sm: 'none', xs: 'block'}}}/>
+            <LeftText leftP={leftP}/>
         </Box>
     );
 };

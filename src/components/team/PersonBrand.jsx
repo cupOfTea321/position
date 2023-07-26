@@ -1,13 +1,14 @@
 import React from 'react';
 import {Box, Typography} from "@mui/material";
 
-const PersonBrand = ({sx}) => {
+const PersonBrand = ({sx, position}) => {
     const titleCSS = {
         fontWeight: 500,
         zIndex: 500,
         textShadow: 'rgba(231, 69, 54, 1) 1px -3px',
         shadowColor: 'green',
-        fontFamily: 'Heading Now Trial'
+        fontFamily: 'Heading Now Trial',
+        // textAlign: {sm: 'left', xs: 'center'}
     }
     return (
         <Box sx={sx}>
@@ -22,10 +23,11 @@ const PersonBrand = ({sx}) => {
             <Typography sx={{...titleCSS,
                 color: 'white',
                 marginTop: '-10px',
+                marginBottom: '20px',
                 fontSize: {sm: '50px', xs: '40px'},
                 float: 'right',
                 zIndex: 200}} className={'animate__animated animate__fadeInUp animate__delay-1s'}>
-                МОЙ БРЕНД-НЕПРИКАСАЕМЫЙ
+                {position}
             </Typography>
         </Box>
     );

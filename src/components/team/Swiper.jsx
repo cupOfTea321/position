@@ -55,7 +55,7 @@ const MySwiper = () => {
                 modules={[EffectCoverflow, Pagination, Navigation]}
                 className="swiper_container animate__animated  animate__bounceIn "
             >
-                {slides.map(slide => (
+                {slides.map((slide, index) => (
                     <SwiperSlide key={slide} style={{
                         // width: {sm: '37rem', xs: '22rem'},
                         height: {sm: '40vh', xs: '30rem'},
@@ -79,7 +79,7 @@ const MySwiper = () => {
                                 marginTop: '20px',
                                 fontSize: {md: '50px', sm: '40px', xs: '30px'},
                                 padding: {sm: '0px 18px', xs: '10px 20px'},
-                            }} link={'/person'}/>
+                            }} link={`/person/${index+1}`}/>
                         </Box>
                     </SwiperSlide>
                 ))}

@@ -28,8 +28,8 @@ function App() {
           <Routes>
               <Route element={<Layout />} path={'/'}>
                   <Route element={<SliderPage />} path={''}/>
-                  <Route element={<TeamPage />} path={'team'}/>
-                  <Route element={<PersonPage />} path={'person'}/>
+                  <Route element={<TeamPage />} path={'pr'}/>
+                  <Route element={<PersonPage />} path={'person/:id'}/>
               </Route>
 
           </Routes>

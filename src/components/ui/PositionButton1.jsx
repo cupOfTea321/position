@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Box} from "@mui/material";
 import {NavLink} from "react-router-dom";
 
-const PositionButton1 = ({sx, onMouseEnter, disabled, link = 'team' }) => {
+const PositionButton1 = ({sx, onMouseEnter, disabled, link = 'pr' }) => {
 
 
     // const handleClick = () => {
