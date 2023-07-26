@@ -5,32 +5,33 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import slider1 from '../../assets/slider/slider1.jpg';
-import slider2 from '../../assets/slider/slider2.jpg';
-import slider3 from '../../assets/slider/slider3.jpg';
-import slider4 from '../../assets/slider/slider4.jpg';
-import slider5 from '../../assets/slider/slider5.jpg';
-import slider6 from '../../assets/slider/slider6.jpg';
-import slider7 from '../../assets/slider/slider7.jpg';
-import slider8 from '../../assets/slider/slider8.jpg';
-import slider9 from '../../assets/slider/slider9.jpg';
-import slider10 from '../../assets/slider/slider10.jpg';
+
+import slider1 from '../../assets/slider/photo1.png';
+import slider2 from '../../assets/slider/photo2.png';
+import slider3 from '../../assets/slider/photo3.png';
+import slider4 from '../../assets/slider/photo4.png';
+import slider5 from '../../assets/slider/photo5.png';
+import slider6 from '../../assets/slider/photo6.png';
+import slider7 from '../../assets/slider/photo7.png';
+import slider8 from '../../assets/slider/photo8.png';
+import slider9 from '../../assets/slider/photo9.png';
+import slider10 from '../../assets/slider/photo10.png';
 import btn from '../../assets/slider/rightBtn.png';
 import {Box, Typography} from "@mui/material";
 import PositionButton1 from "../ui/PositionButton1.jsx";
 
 const MySwiper = () => {
     const slides = [
-        {img: slider1, title: 'Алена Сухаревская', company: 'Юрент'},
-        {img: slider2, title: 'Сергей Денисенко', company: 'ВсеИнструменты.ру'},
-        {img: slider3, title: 'Юлия Варламова', company: 'Ситидрайв'},
-        {img: slider4, title: 'Юлия Володяева', company: 'Лента Онлайн'},
-        {img: slider5, title: 'Михаил Бергген', company: 'СДЭК'},
-        {img: slider6, title: 'Ольга Чернявская', company: 'Factory'},
-        {img: slider7, title: 'Ольга Шабаева', company: 'Работа.ру '},
-        {img: slider10, title: 'Дарья Орешко', company: 'flowwow'},
-        {img: slider9, title: 'Елена Винокурцева', company: 'Skyeng'},
-        {img: slider8, title: 'Анастасия Баштовая', company: 'Яндекс 360'},
+        {img: slider1, title: 'АЛЕНА СУХАРЕВСКАЯ', company: 'Юрент'},
+        {img: slider2, title: 'СЕРГЕЙ ДЕНИСЕНКО', company: 'ВсеИнструменты.ру'},
+        {img: slider3, title: 'ЮЛИЯ ВАРЛАМОВА', company: 'Ситидрайв'},
+        {img: slider4, title: 'ЮЛИЯ ВОЛОДЯЕВА', company: 'Лента Онлайн'},
+        {img: slider5, title: 'МИХАИЛ БЕРГГРЕН', company: 'СДЭК'},
+        {img: slider6, title: 'ОЛЬГА ЧЕРНЯВСКАЯ', company: 'Skillfactory'},
+        {img: slider7, title: 'ОЛЬГА ШАБАЕВА', company: 'Работа.ру '},
+        {img: slider8, title: 'ДАРЬЯ ОРЕШКО', company: 'flowwow'},
+        {img: slider9, title: 'ЕЛЕНА ВИНОКУРЦЕВА', company: 'Skyeng'},
+        {img: slider10, title: 'АНАСТАСИЯ БАШТОВАЯ', company: 'Яндекс 360'},
     ]
     return (
         <>
@@ -70,10 +71,16 @@ const MySwiper = () => {
 
                         }}/>
                         <Box className={`proj-txtx`} sx={{color: 'white'}}>
-                            <Typography variant={'h6'}>
+                            <Typography variant={'h6'} sx={{
+                                fontSize: '32px'
+                            }}>
                                 {slide.title}
                             </Typography>
-                            <span>{slide.company}</span>
+                            <span style={{
+                                fontWeight: 600,
+                                textShadow: 'black 0px 0 100px',
+                                fontSize: '20px'
+                            }}>{slide.company}</span>
                             <PositionButton1 sx={{
                                 position: '',
                                 marginTop: '20px',
@@ -86,38 +93,37 @@ const MySwiper = () => {
 
 
                 <Box className="slider-controler" sx={{
-                    marginTop: {sm: '-1%', xs: '-20%'}
+                    marginTop: {sm: '-1%', xs: '-12%'}
                 }}>
                     <Box className="swiper-button-prev slider-arrow" sx={{
                         left: '36%',
                         transform: 'translateX(-58%) !important',
                         borderRadius: '50%',
                         background: ' rgba(217, 217, 217, 0.3)',
-                        width: '100px',
-                        height: '100px',
-                        padding: '25px 25px 26px 15px'
+                        width: {sm: '100px', xs: '50px'},
+                        height: {sm: '100px', xs: '50px'},
+                        padding: {sm: '25px 25px 26px 15px', xs: '25px 25px 26px 20px'}
                     }}>
                         {/*<ion-icon name="arrow-back-outline"></ion-icon>*/}
                         <Box  component={'img'} src={btn} sx={{
                             rotate: '180deg',
-                            width: '34px',
-                            height: '58px'
+                            width: {sm: '34px', xs: '17px'},
+                            height: {sm: '58px', xs: '29px'},
                         }}/>
                     </Box>
                     <Box className="swiper-button-next slider-arrow" sx={{
-                        right: {lg: '29%', md: '25%', sm: '24%', xs: '10%'},
+                        right: {lg: '29%', md: '25%', sm: '24%', xs: '23%'},
                         transform: 'translateX(-58%) !important',
                         borderRadius: '50%',
                         background: ' rgba(217, 217, 217, 0.3)',
-                        width: '100px',
-                        height: '100px',
-                        padding: '25px 25px 26px 35px'
+                        width: {sm: '100px', xs: '50px'},
+                        height: {sm: '100px', xs: '50px'},
+                        padding: {sm: '25px 15px 26px 25px', xs: '25px 21px 26px 28px'}
                     }}>
                         {/*<ion-icon name="arrow-forward-outline"></ion-icon>*/}
                         <Box  component={'img'} src={btn} sx={{
-                            width: '34px',
-                            height: '58px',
-
+                            width: {sm: '34px', xs: '17px'},
+                            height: {sm: '58px', xs: '29px'},
                         }}/>
                     </Box>
                     {/*<div className="swiper-pagination"></div>*/}

@@ -11,7 +11,7 @@ const PersonBrand = ({sx, position}) => {
         // textAlign: {sm: 'left', xs: 'center'}
     }
     return (
-        <Box sx={sx}>
+        <Box sx={{...sx, width: {sm: '100%', xs: '100%'}}}>
             <Typography
                 className={'animate__animated animate__fadeInUp animate__delay-1s'}
                 sx={{
@@ -25,8 +25,12 @@ const PersonBrand = ({sx, position}) => {
                 marginTop: '-10px',
                 marginBottom: '20px',
                 fontSize: {sm: '50px', xs: '40px'},
-                float: 'right',
-                zIndex: 200}} className={'animate__animated animate__fadeInUp animate__delay-1s'}>
+                // float: 'right',
+                zIndex: 200,
+                paddingLeft: {desktop: '140px', lg: '120px', md: '40px', sm: '20px', xs: '40px'},
+                // textAlign: 'right',
+                width: {sm: '100%', xs: '100%'}
+            }} className={'animate__animated animate__fadeInUp animate__delay-1s'}>
                 {position}
             </Typography>
         </Box>

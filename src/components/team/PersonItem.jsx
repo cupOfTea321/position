@@ -24,7 +24,7 @@ const PersonItem = ({person}) => {
             fontFamily: 'heading_now_trial45_medium',
 
         }} >
-            <Container maxWidth={'lg'} sx={{
+            <Container maxWidth={'desktop'}  sx={{
                 margin: {sm: '110px 0', xs: '40px 0'},
                 color: 'white',
                 display: 'flex',
