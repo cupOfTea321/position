@@ -1,5 +1,5 @@
 import React from 'react';
-import MySwiper from "../components/Swiper.jsx";
+import MySwiper from "../components/team/Swiper.jsx";
 import phone6 from "../assets/slide1/phone1.png";
 import {Box} from "@mui/material";
 import phone from "../assets/slider/sliderPhone.png";

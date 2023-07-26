@@ -19,6 +19,7 @@ import {Route, Routes} from "react-router-dom";
 import SliderPage from "./pages/SliderPage.jsx";
 import TeamPage from "./pages/TeamPage.jsx";
 import Layout from "./components/layout/Layout.jsx";
+import PersonPage from "./pages/PersonPage.jsx";
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
               <Route element={<Layout />} path={'/'}>
                   <Route element={<SliderPage />} path={''}/>
                   <Route element={<TeamPage />} path={'team'}/>
+                  <Route element={<PersonPage />} path={'person'}/>
               </Route>
 
           </Routes>

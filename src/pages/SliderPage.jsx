@@ -43,6 +43,7 @@ const SliderPage = () => {
     return (
         <Box sx={{
             // background:
+
         }}>
 
             {slide === 1 && <BlackPhoneSlide slide={slide} slideHandler={slideHandler} disabled={disabled}/>}

@@ -24,6 +24,9 @@
 .MuiTypography-body1{
   font-family: 'Heading Now Trial' !important;
 }
+.MuiTypography-raleway{
+  font-family: 'Raleway', sans-serif;
+}
 /* ТЕКСТ ПОД КНОПКОЙ */
 .MuiTypography-text{
   font-family: 'Sofia Pro', sans-serif ! important;
